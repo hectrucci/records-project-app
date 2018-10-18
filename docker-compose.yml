@@ -1,0 +1,19 @@
+version: '3.3'
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_DB: records-dev
+      POSTGRES_PASSWORD: pass
+  web:
+    build: .
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    ports:
+      - "8081:8081"
+    depends_on:
+      - postgres
+    environment:
+      WAIT_HOSTS: postgres:5432

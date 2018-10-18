@@ -1,0 +1,37 @@
+{
+  "name": "records-project-app",
+  "version": "1.0.0",
+  "description": "Records Project Server",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run migrate-down && npm run migrate-up && npm run seed && node src/server.js",
+    "dev": "nodemon src/server.js",
+    "sequelize": "sequelize",
+    "migrate-up": "sequelize db:migrate",
+    "migrate-down": "sequelize db:migrate:undo",
+    "seed": "sequelize db:seed:all"
+  },
+  "engines": {
+    "node": "8.11.3",
+    "npm": "5.6.0"
+  },
+  "author": "Hector Antunez <hectrucci@gmail.com> (https://github.com/hectrucci)",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.1",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.3.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.4",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "pg": "^7.5.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.39.1",
+    "sequelize-cli": "^5.1.0",
+    "sequelize-soft-delete": "^1.0.1"
+  }
+}

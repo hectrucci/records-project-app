@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "root",
+    "password": "pass",
+    "database": "records-dev",
+    "host": "postgres",
+    "dialect": "postgres",
+    "timezone": "utc"
+  },
+  "test": {
+    "username": "root",
+    "password": "pass",
+    "database": "records-test",
+    "host": "postgres",
+    "dialect": "postgres",
+    "timezone": "utc"
+  },
+  "production": {
+    "username": "root",
+    "password": "pass",
+    "database": "records-production",
+    "host": "postgres",
+    "dialect": "postgres",
+    "timezone": "utc"
+  }
+}
