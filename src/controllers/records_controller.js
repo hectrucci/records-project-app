@@ -21,7 +21,7 @@ module.exports.controller = (app) => {
         const { name, favoriteColor } = req.body;
 
         if (!name || !favoriteColor) {
-            return res.status(401).json({message: 'Oops!, it seems you missed some info'});
+            return res.status(400).json({message: 'Oops!, it seems you missed some info'});
         }
 
         const record = new Record({ name, favoriteColor });
