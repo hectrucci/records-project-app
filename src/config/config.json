@@ -16,10 +16,7 @@
     "timezone": "utc"
   },
   "production": {
-    "username": "root",
-    "password": "pass",
-    "database": "records-production",
-    "host": "postgres",
+    "use_env_variable": "DATABASE_URL",
     "dialect": "postgres",
     "timezone": "utc"
   }
