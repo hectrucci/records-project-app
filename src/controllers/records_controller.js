@@ -5,7 +5,7 @@ const passport = require('passport');
 const jwt = require('jsonwebtoken');
 
 module.exports.controller = (app) => {
-    /*
+    /**
      * get records list, returns a count of all the records and a list of records
      * delimited by req.body.size(limit) and req.body.page(offset)
      */

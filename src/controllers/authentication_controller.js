@@ -31,7 +31,9 @@ module.exports.controller = (app) => {
                     const payload = { username: user.username };
                     const { expiresIn } = jwtOptions;
                     const token = jwt.sign(payload, jwtOptions.secretOrKey, { expiresIn });
-                    res.json({ message: 'ok', token, user: user });
+
+                    // returns only the username in the response, without pass and other attrs
+                    res.json({ message: 'ok', token, user: payload });
                 } else {
 
                     // if there is no match, return 401
