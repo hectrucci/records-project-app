@@ -18,7 +18,6 @@ app.use(expressSanitizer());
 app.use(passport.initialize());
 app.use(cors());
 
-
 // Include controllers
 fs.readdirSync('./src/controllers').forEach(file => {
     if (file.substr(-3) === '.js') {
