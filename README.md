@@ -9,5 +9,6 @@
 # Run Docker container
 docker-compose build --no-cache && docker-compose up --force-recreate
 
+# database name "records-dev"
 # db credentials "root:pass"
 ```
